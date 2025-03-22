@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Three - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <div class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#hobbies">My Hobbies</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="project-detail-container">
+        <!-- Project Navigation -->
+        <nav class="project-nav">
+            <h3>Projects</h3>
+            <ul class="project-nav-links">
+                <li><a href="project1.html">Project One</a></li>
+                <li><a href="project2.html">Project Two</a></li>
+                <li><a href="project3.html" class="active">Project Three</a></li>
+            </ul>
+        </nav>
+
+        <!-- Project Content -->
+        <main class="project-content">
+            <div class="project-header">
+                <h1>Project Three</h1>
+                <div class="project-meta">
+                    <span><i class="far fa-calendar"></i> Completed: March 2024</span>
+                </div>
+            </div>
+
+            <img src="https://via.placeholder.com/800x400" alt="Project Three" class="project-image">
+
+            <div class="project-description">
+                <p>This is a detailed description of Project Three. Explain the project's purpose, your role, and the impact it had. Include information about the challenges you faced and how you overcame them.</p>
+                <p>You can include multiple paragraphs to thoroughly describe different aspects of the project.</p>
+            </div>
+
+            <div class="survey-section">
+                <h2>Project Feedback Survey</h2>
+                <div class="survey-container">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSf45JcyW6Jvv56K5GQzBHPWJr7MRKRixp-Rjljh_4lj_fypnA/viewform?embedded=true" 
+                        title="Project Feedback Survey"
+                        class="survey-iframe">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <h2>Technical Details</h2>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="#" class="btn">View Live Demo</a>
+                <a href="#" class="btn">View Source Code</a>
+            </div>
+        </main>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" aria-label="toggle project navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript for mobile navigation -->
+    <script>
+        // Main navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Project navigation toggle for mobile
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.project-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 
