@@ -1,0 +1,211 @@
+/* Project Detail Page Styles */
+.project-detail-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 60px; /* Account for fixed navbar */
+}
+
+/* Vertical Navigation Styles */
+.project-nav {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 60px; /* Account for main navbar */
+    overflow-y: auto;
+    border-right: 1px solid #e9ecef;
+}
+
+.project-nav h3 {
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    color: #2d3436;
+}
+
+.project-nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.project-nav-links li {
+    margin: 0;
+}
+
+.project-nav-links a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.project-nav-links a:hover {
+    background-color: #edf2ff;
+    color: #667eea;
+}
+
+.project-nav-links a.active {
+    background-color: #edf2ff;
+    color: #667eea;
+    border-left-color: #667eea;
+    font-weight: 500;
+}
+
+/* Main Content Styles */
+.project-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.project-header h1 {
+    font-size: 2.5em;
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.project-description {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.project-details {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background-color: #edf2ff;
+    color: #667eea;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Survey Section Styles */
+.survey-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.survey-section h2 {
+    color: #2d3436;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.survey-intro {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1.1em;
+}
+
+.survey-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.survey-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive adjustments for survey */
+@media (max-width: 768px) {
+    .survey-section {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .survey-container {
+        padding-bottom: 75%; /* Taller aspect ratio for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .survey-section {
+        padding: 1rem;
+    }
+
+    .survey-section h2 {
+        font-size: 1.5em;
+    }
+
+    .survey-intro {
+        font-size: 1em;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-nav {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+
+    .project-nav.active {
+        transform: translateX(0);
+    }
+
+    .project-content {
+        margin-left: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+        background-color: #667eea;
+        color: white;
+        padding: 1rem;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 101;
+        cursor: pointer;
+    }
+} 
